@@ -1490,7 +1490,7 @@ class _Fishes extends State<Fishes> {
       Str1.add(product);
       Str3.add(prices);
       Str2.add(productNames);
-      }
+      }//fgthy
   }
 
   @override
