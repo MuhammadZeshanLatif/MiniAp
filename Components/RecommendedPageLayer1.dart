@@ -136,9 +136,11 @@ class LowerCards extends StatefulWidget {
 }
 
 class _LowerCardsState extends State<LowerCards> {
-  List<String> images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9noHfDPE_B8X6GgTj-c39q0NyfgWRBn6iCXmFaU_8TAGk195-NTzCOsW9Og8mF0TbnG0",
+  List<String> images = [];
+  List<String> imag = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9noHfDPE_B8X6GgTj-c39q0NyfgWRBn6iCXmFaU_8TAGk195-NTzCOsW9Og8mF0TbnG0",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIWkQdiwxZ7jMU7Tjdkybei7yt5gVQvMIv9kpucEll&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh_zvMB9TsulqC9Nf6Yp3RGnJtV5eSw68T00vhYezikw&s",
+    "https://media.istockphoto.com/id/589415708/photo/fresh-fruits-and-vegetables.jpg?s=612x612&w=0&k=20&c=aBFGUU-98pnoht73co8r2TZIKF3MDtBBu9KSxtxK_C0="
   ];
   int selectedContainerIndex = -1;
   List<String> products = [
@@ -162,11 +164,21 @@ class _LowerCardsState extends State<LowerCards> {
 
   @override
   void initState() {
+    int j=0;
+    int i = 0;
     for (int i = 0; i < products.length; i++) {
-      // String product = products[Random().nextInt(products.length)];
-      // String prices = price[Random().nextInt(price.length)];
-      Str1.add(products[i]);
-      Str2.add(price[i]);
+      int j = 0;
+      int i = 0;
+      for (i; i < 20; i++) {
+        images.add(imag[j]);
+        Str1.add(products[j]);
+        Str2.add(price[j]);
+        j++;
+        if (j > 3) {
+          j = 0;
+        }
+
+      }
     }
   }
 
@@ -283,7 +295,8 @@ class CatogariesCards extends StatefulWidget {
   _catogariesCards createState() => _catogariesCards();
 }
 class _catogariesCards extends State<CatogariesCards> {
-  List<String> images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9noHfDPE_B8X6GgTj-c39q0NyfgWRBn6iCXmFaU_8TAGk195-NTzCOsW9Og8mF0TbnG0",
+  List<String> images = [];
+  List<String> imag  = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9noHfDPE_B8X6GgTj-c39q0NyfgWRBn6iCXmFaU_8TAGk195-NTzCOsW9Og8mF0TbnG0",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIWkQdiwxZ7jMU7Tjdkybei7yt5gVQvMIv9kpucEll&s",
     "https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309642.jpg?t=st=1694098192~exp=1694098792~hmac=1231d3192d06f36aa4a0ae2a25091880952c40becfa9d619352b81c8ffe7c744",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh_zvMB9TsulqC9Nf6Yp3RGnJtV5eSw68T00vhYezikw&s",
@@ -312,14 +325,24 @@ class _catogariesCards extends State<CatogariesCards> {
   List<String> Str1 = [];
   List<String> Str2 = [];
 
+
   @override
   void initState() {
-    for (int i = 0; i < images.length; i++) {
-      //images.add("https://source.unsplash.com/random/900x900/?img=${i}");
-      // String product = products[Random().nextInt(products.length)];
-      // String prices = price[Random().nextInt(price.length)];
-      Str1.add(products[i]);
-      Str2.add(price[i]);
+    int j=0;
+    int i = 0;
+    for (int i = 0; i < products.length; i++) {
+      int j = 0;
+      int i = 0;
+      for (i; i < 20; i++) {
+        images.add(imag[j]);
+        Str1.add(products[j]);
+        Str2.add(price[j]);
+        j++;
+        if (j > 6) {
+          j = 0;
+        }
+
+      }
     }
   }
 
@@ -1490,7 +1513,7 @@ class _Fishes extends State<Fishes> {
       Str1.add(product);
       Str3.add(prices);
       Str2.add(productNames);
-      }//fgthy
+      }
   }
 
   @override
