@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import './colors.dart';
 import './Buttons.dart';
-import 'package:flutter/material.dart';
-
 class Hadings {
   final String? line;
   final double? paddindTop;
